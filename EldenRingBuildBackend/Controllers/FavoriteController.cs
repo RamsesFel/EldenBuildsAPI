@@ -23,7 +23,7 @@ namespace EldenRingBuildBackend.Controllers
         {
             dbContext.Favorites.Add(newFavorite);
             dbContext.SaveChanges();
-            return Created($"/Favorite/Api{newFavorite.Id}", newFavorite);
+            return Created($"/Api/Favorite{newFavorite.Id}", newFavorite);
         }
 
         [HttpDelete("{id}")] 

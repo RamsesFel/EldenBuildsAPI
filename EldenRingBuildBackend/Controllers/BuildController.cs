@@ -29,7 +29,7 @@ namespace EldenRingBuildBackend.Controllers
         {
             dbContext.Builds.Add(newBuild);
             dbContext.SaveChanges();
-            return Created($"/Build/Api{newBuild.Id}", newBuild);
+            return Created($"/Api/Build{newBuild.Id}", newBuild);
         }
 
         [HttpDelete("{id}")]

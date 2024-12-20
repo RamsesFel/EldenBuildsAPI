@@ -22,7 +22,7 @@ namespace EldenRingBuildBackend.Controllers
         {
             dbContext.Createds.Add(newCreated);
             dbContext.SaveChanges();
-            return Created($"/Created/Api{newCreated.Id}", newCreated);
+            return Created($"/Api/Created{newCreated.Id}", newCreated);
         }
      
         [HttpDelete("{id}")]
